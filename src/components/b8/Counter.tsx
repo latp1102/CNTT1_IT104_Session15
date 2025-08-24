@@ -17,6 +17,7 @@ export default class Counter extends Component<object, StateType> {
         }
     return (
       <div><h2>Counter: {this.state.count}</h2></div>
+      <button onClick={handleIncrease}>Tăng</button> 
     )
   }
 }
