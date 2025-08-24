@@ -15,7 +15,7 @@ export default class Counter extends Component<object, StateType> {
             this.setState((prevState) => ({
                 count: (prevState.count + 1) % 11,
             }))
-        }, 1000)
+        })
     }
     componentWillUnmount(): void {
         if(this.timerId){
