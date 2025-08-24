@@ -3,21 +3,10 @@ interface StateType {
     time: Date;
 }
 export default class Clock extends Component<object, StateType> {
-    private timeId?: NodeJS.Timeout;
     constructor(props: object){
         super(props);
         this.state = {
             time: new Date(),
-        }
-    }
-    componentDidMount(): void {
-        this.timeId = setInterval(() => {
-            this.setState({time: new Date()});
-        });
-    }
-    componentWillUnmount(): void {
-        if(this.timeId){
-            clearInterval(this.timeId);
         }
     }
   render() {
